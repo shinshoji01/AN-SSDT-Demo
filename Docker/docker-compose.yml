@@ -1,0 +1,9 @@
+version: "2"
+services:
+  httpd:
+    image: php:7.0-apache
+    container_name: spaccentdemo-httpd
+    ports:
+      - "3333:80"
+    volumes:
+      - ../:/var/www/html
