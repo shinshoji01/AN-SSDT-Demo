@@ -17,8 +17,11 @@ with doc.head:
     meta(http_equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1")
     title("Accent Normalization Demo")
-    link(href="/statics/bootstrap-5.2.3-dist/css/bootstrap.min.css", rel="stylesheet")
-    link(href="/statics/my.css", rel="stylesheet")
+    link(
+        href="/AN-SSDT-Demo/statics/bootstrap-5.2.3-dist/css/bootstrap.min.css",
+        rel="stylesheet",
+    )
+    link(href="/AN-SSDT-Demo/statics/my.css", rel="stylesheet")
 
 with doc:
     # Title and Metadata:
@@ -48,7 +51,7 @@ with doc:
             h3("Speech Samples for General Evaluation")
             p(
                 """
-                In this task, we evaluate the naturalness of samples derived from the following systems.
+                In this panel, the normal samples without duration constraints are presented.
                 """,
                 cls="lead",
             )
@@ -58,26 +61,42 @@ with doc:
                 cls="lead",
             )
 
-        # with div(cls="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded"):
-        #     from length_control import get_table
+        with div(cls="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded"):
+            from length_control import get_table
 
-        #     h3("Speech Samples with Length Control")
-        #     p(
-        #         """
-        #         In this task, we evaluate the accentedness reduction achieved by the four systems.
-        #         """,
-        #         cls="lead",
-        #     )
-        #     get_table()
-        #     p(
-        #         "* please scroll horizontally to explore additional columns in the table.",
-        #         cls="lead",
-        #     )
+            h3("Speech Samples with Length Control")
+            p(
+                """
+                In this panel, the samples are generated with the total duration controlled the same as that of the source audios.
+                """,
+                cls="lead",
+            )
+            get_table()
+            p(
+                "* please scroll horizontally to explore additional columns in the table.",
+                cls="lead",
+            )
+
+        with div(cls="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded"):
+            from length_control_extreme import get_table
+
+            h3("Speech Samples with Length Control -- Cases with Extreme Lengths")
+            p(
+                """
+                In this panel, the samples are of the same lengths as the source audios, which are extremely long due to disfluencies.
+                """,
+                cls="lead",
+            )
+            get_table()
+            p(
+                "* please scroll horizontally to explore additional columns in the table.",
+                cls="lead",
+            )
 
 
 with doc.footer:
-    script(src="/statics/jquery/jquery-3.7.1.slim.min.js")
-    script(src="/statics/bootstrap-5.2.3-dist/bootstrap.min.js")
+    script(src="/AN-SSDT-Demo/statics/jquery/jquery-3.7.1.slim.min.js")
+    script(src="/AN-SSDT-Demo/statics/bootstrap-5.2.3-dist/bootstrap.min.js")
 
 # Script for allowing only one audio to play at the same time:
 doc.children.append(

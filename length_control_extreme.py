@@ -3,94 +3,54 @@ from dominate.tags import *
 
 systems = [
     ("Source", "source", "{spk}_{sid}.wav"),
-    ("Pseudo-target", "pseudo", "{spk}_{sid}.wav"),
+    # ("Pseudo-target", "pseudo", "{spk}_{sid}.wav"),
     # ("Re-synthesis", "resynth", "{spk}_{sid}.resynth.wav"),
     ("Baseline", "baseline", "{spk}_{sid}-converted.wav"),
-    ("Proposed", "ours", "{spk}_{sid}.gen.wav"),
-    # ("Proposed w/ dur. scaling", "ours-scale", "{spk}_{sid}.gen.wav"),
-    # ("Proposed w/ dur. control", "ours-control-scale", "{spk}_{sid}.gen.wav"),
+    # ("Proposed", "ours", "{spk}_{sid}.gen.wav"),
+    ("Proposed w/ dur. scaling", "ours-scale", "{spk}_{sid}.gen.wav"),
+    ("Proposed w/ dur. control", "ours-control-scale", "{spk}_{sid}.gen.wav"),
 ]
 
 samples = [
     (
         "BWC",
-        "arctic_b0095",
-        "He heard a sound which brought him quickly into consciousness of day.",
+        "arctic_a0368",
+        "I just do appreciate it without being able to express my feelings.",
     ),
     (
         "LXC",
-        "arctic_b0383",
-        "A bush chief had died a natural death.",
+        "arctic_a0017",
+        "From that moment his friendship for Belize turns to hatred and jealousy.",
     ),
     (
         "NCC",
-        "arctic_b0419",
-        "Your father's fifth command, he nodded.",
+        "arctic_a0084",
+        "Scarcely had he uttered the name when Pierre's closing eyes shot open.",
     ),
     (
         "TXHC",
-        "arctic_a0053",
-        "Suddenly his fingers closed tightly over the handkerchief.",
+        "arctic_b0407",
+        "Of course much grumbling went on, and little outbursts were continually occurring.",
     ),
     (
         "BWC",
-        "arctic_a0103",
-        "But there came no promise from the bow of the canoe.",
+        "arctic_a0084",
+        "Scarcely had he uttered the name when Pierre's closing eyes shot open.",
     ),
     (
         "LXC",
+        "arctic_b0487",
+        "After all superfluous flesh is gone what is left is stringy and resistant.",
+    ),
+    (
+        "NCC",
+        "arctic_b0407",
+        "Of course much grumbling went on, and little outbursts were continually occurring.",
+    ),
+    (
+        "TXHC",
         "arctic_b0450",
         "To my dearest and always appreciated friend, I submit myself.",
-    ),
-    (
-        "NCC",
-        "arctic_a0209",
-        "It was not a large lake, and almost round.",
-    ),
-    (
-        "TXHC",
-        "arctic_b0441",
-        "And there was Ethel Baird, whom also you must remember.",
-    ),
-    (
-        "BWC",
-        "arctic_a0463",
-        "They are his tongue, by which he makes his knowledge articulate.",
-    ),
-    (
-        "LXC",
-        "arctic_a0045",
-        "He moved away as quietly as he had come.",
-    ),
-    (
-        "NCC",
-        "arctic_a0589",
-        "I was sick once -- typhoid.",
-    ),
-    (
-        "TXHC",
-        "arctic_a0103",
-        "But there came no promise from the bow of the canoe.",
-    ),
-    (
-        "BWC",
-        "arctic_a0367",
-        "There is not an iota of truth in it, certainly not.",
-    ),
-    (
-        "LXC",
-        "arctic_b0383",
-        "A bush chief had died a natural death.",
-    ),
-    (
-        "NCC",
-        "arctic_b0344",
-        "Lots of men take women buggy riding.",
-    ),
-    (
-        "TXHC",
-        "arctic_a0109",
-        "Do you know that you are shaking my confidence in you.",
     ),
 ]
 

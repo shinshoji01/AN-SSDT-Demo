@@ -3,12 +3,12 @@ from dominate.tags import *
 
 systems = [
     ("Source", "source", "{spk}_{sid}.wav"),
-    ("Pseudo-target", "pseudo", "{spk}_{sid}.wav"),
+    # ("Pseudo-target", "pseudo", "{spk}_{sid}.wav"),
     # ("Re-synthesis", "resynth", "{spk}_{sid}.resynth.wav"),
     ("Baseline", "baseline", "{spk}_{sid}-converted.wav"),
-    ("Proposed", "ours", "{spk}_{sid}.gen.wav"),
-    # ("Proposed w/ dur. scaling", "ours-scale", "{spk}_{sid}.gen.wav"),
-    # ("Proposed w/ dur. control", "ours-control-scale", "{spk}_{sid}.gen.wav"),
+    # ("Proposed", "ours", "{spk}_{sid}.gen.wav"),
+    ("Proposed w/ dur. scaling", "ours-scale", "{spk}_{sid}.gen.wav"),
+    ("Proposed w/ dur. control", "ours-control-scale", "{spk}_{sid}.gen.wav"),
 ]
 
 samples = [
