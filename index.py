@@ -36,7 +36,7 @@ with doc:
 
             section_abstract()
             p(
-                "You can download all audio files on this page by cloning this annoymous ",
+                "You can download all audio files on this page by cloning this",
                 a(
                     "github repository",
                     href="https://github.com/shinshoji01/AN-SSDT-Demo",
